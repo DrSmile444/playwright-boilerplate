@@ -28,6 +28,9 @@ export const folderStructureConfig = createFolderStructure({
     {
       name: 'src',
       children: [
+        // Apply fixture rule for organized test data files
+        { name: 'fixtures', ruleId: 'fixtureRule' },
+
         // Apply config rule for configuration files
         { name: 'config', ruleId: 'configRule' },
 
@@ -36,6 +39,12 @@ export const folderStructureConfig = createFolderStructure({
 
         // Apply interface rule for TypeScript interfaces
         { name: 'interfaces', ruleId: 'interfaceRule' },
+
+        // Apply page rule for Page Object Model (POM) files
+        { name: 'pages', ruleId: 'pageRule' },
+
+        // Apply page rule for Page Object Model (POM) files
+        { name: 'preload', ruleId: 'preloadRule' },
 
         // Apply test rule for Playwright test cases and setups
         { name: 'tests', ruleId: 'specFolderRule' },
@@ -81,9 +90,12 @@ export const folderStructureConfig = createFolderStructure({
   rules: {
     configRule: getGenericFolder({ type: 'config' }),
     decoratorsRule: getGenericFolder({ type: 'decorator' }),
+    fixtureRule: getGenericFolder({ type: 'fixture' }),
     interfaceRule: {
       children: [{ name: 'index.ts' }, ...getGenericFolder({ type: 'interface' }).children],
     },
+    pageRule: getGenericFolder({ type: 'page' }),
+    preloadRule: getGenericFolder({ type: 'preload' }),
     specFoldersRule: {
       name: '{kebab-case}',
       folderRecursionLimit: 3,

@@ -6,6 +6,7 @@ import tseslint from 'typescript-eslint';
 import jestEslint from './.eslint/jest.eslint.mjs';
 import noSecretsEslint from './.eslint/no-secrets.eslint.mjs';
 import { orderedImportsEslint } from './.eslint/ordered-imports.eslint.mjs';
+import { playwrightEslint } from './.eslint/playwright.eslint.mjs';
 import perfectionistEslint from './.eslint/perfectionist.eslint.mjs';
 import projectStructureEslint from './.eslint/project-structure.eslint.mjs';
 import securityEslint from './.eslint/security.eslint.mjs';
@@ -32,6 +33,7 @@ export default [
   ),
   ...sonarEslint,
   eslintPluginPrettierRecommended,
+  playwrightEslint,
   orderedImportsEslint,
   ...noSecretsEslint,
   ...securityEslint,
@@ -39,5 +41,6 @@ export default [
   unicornEslint,
   ...projectStructureEslint,
   ...compat.extends('./.eslint/overrides.eslintrc.json'),
+  ...compat.extends('./.eslint/playwright.eslintrc.json'),
   ...jestEslint,
 ];
