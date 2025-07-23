@@ -7,7 +7,7 @@ interface APIRequestFixture {
   apiRequest: APIRequestContext;
 }
 
-export const test = base.extend<PlaywrightExtraConfig & APIRequestFixture>({
+export const test = base.extend<APIRequestFixture & PlaywrightExtraConfig>({
   apiUrl: ['', { option: true }],
 
   apiRequest: async ({ apiUrl }, use) => {

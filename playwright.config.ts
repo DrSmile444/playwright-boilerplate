@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/slow-regex */
 import type { PlaywrightTestConfig } from '@playwright/test';
 import { defineConfig, devices } from '@playwright/test';
 

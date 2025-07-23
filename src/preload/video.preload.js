@@ -28,7 +28,6 @@ const displayClickEffect = (event) => {
   });
 };
 
-// eslint-disable-next-line unicorn/prefer-global-this
 window.addEventListener('DOMContentLoaded', () => {
   const style = document.createElement('style');
   style.innerHTML = `
@@ -123,6 +122,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // We need to constantly move the frameUpdater to the current scroll position
   setInterval(() => {
+    // eslint-disable-next-line sonarjs/pseudo-random
     frameUpdater.style.transform = `translate(${Math.random() * 5}px, ${Math.random() * 5}px)`;
   }, 30);
 
