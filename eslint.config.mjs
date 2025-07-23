@@ -6,6 +6,7 @@ import tseslint from 'typescript-eslint';
 import { orderedImportsEslint } from './.eslint/ordered-imports.eslint.mjs';
 import { playwrightEslint } from './.eslint/playwright.eslint.mjs';
 import projectStructureEslint from './.eslint/project-structure.eslint.mjs';
+import { unicornEslint } from './.eslint/unicorn.eslint.mjs';
 import { compat } from './eslint-compat.config.mjs';
 
 export default [
@@ -21,13 +22,13 @@ export default [
   ...compat.extends(
     './.eslint/node.eslintrc.json',
     './.eslint/custom-style.eslintrc.json5',
-    './.eslint/unicorn.eslintrc.json',
     './.eslint/typescript.eslintrc.json',
     './.eslint/typescript-naming-convention.eslintrc.js',
   ),
   eslintPluginPrettierRecommended,
   playwrightEslint,
   orderedImportsEslint,
+  unicornEslint,
   ...projectStructureEslint,
   ...compat.extends('./.eslint/playwright.eslintrc.json'),
 ];
