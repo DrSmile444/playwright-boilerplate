@@ -15,7 +15,7 @@ import { compat } from './eslint-compat.config.mjs';
 
 export default [
   {
-    ignores: ['node_modules'],
+    ignores: ['node_modules', 'playwright-report', 'test-results', '.auth'],
   },
   { files: ['**/*.{js,mjs,cjs,ts}'] },
   { languageOptions: { globals: globals.node } },
