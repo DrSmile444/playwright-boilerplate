@@ -1,4 +1,3 @@
-/* eslint-disable unicorn/prefer-string-raw */
 /**
  * @author Dmytro Vakulenko
  * @description Best practices for naming in JS / TS

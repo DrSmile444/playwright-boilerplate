@@ -1,4 +1,3 @@
-/* eslint-disable perfectionist/sort-objects */
 // @ts-check
 import { createFolderStructure } from 'eslint-plugin-project-structure';
 
