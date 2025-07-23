@@ -34,6 +34,7 @@ export default [
   perfectionist.configs['recommended-natural'],
   {
     rules: {
+      'perfectionist/sort-named-imports': 'off',
       'perfectionist/sort-imports': 'off',
       'perfectionist/sort-interfaces': 'off',
       'perfectionist/sort-jsx-props': [
