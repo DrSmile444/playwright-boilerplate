@@ -51,6 +51,36 @@ export const folderStructureConfig = createFolderStructure({
         // Apply utility rule for shared helper files
         { name: 'utils', ruleId: 'utilRule' },
 
+        // Any ts fileds in the root of src
+        { name: '{kebab-case}.(ts|js)' },
+
+        // Modules
+        {
+          name: 'modules',
+          children: [
+            // Apply config rule for configuration files
+            { name: 'config', ruleId: 'configRule' },
+
+            // Apply decorator rule for custom decorators
+            { name: 'decorators', ruleId: 'decoratorsRule' },
+
+            // Apply interface rule for TypeScript interfaces
+            { name: 'interfaces', ruleId: 'interfaceRule' },
+
+            // Apply test rule for Playwright test cases and setups
+            { name: 'tests', ruleId: 'specFolderRule' },
+
+            // Apply utility rule for shared helper files
+            { name: 'utils', ruleId: 'utilRule' },
+
+            // Any ts fileds in the root of src
+            { name: '{kebab-case}.(ts|js)' },
+
+            // Allow any folder in the root of src
+            { name: '*', children: [] },
+          ],
+        },
+
         // Allow any folder in the root of src
         { name: '*', children: [] },
       ],

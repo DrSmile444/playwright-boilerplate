@@ -29,8 +29,10 @@ export function Step(stepName?: string) {
     return function replacementMethod(...originalArguments: unknown[]) {
       // 3. Use `stepName` when it's defined or
       // fall back to class name / method name
-      const name = stepName || `${`${this.constructor.name}.${context.name as string}`}`;
+      // @ts-expect-error this is not defined in the decorator context
+      const name = stepName || `${this.constructor.name}.${context.name as string}`;
       return test.step(name, () => {
+        // @ts-expect-error this is not defined in the decorator context
         return target.call(this, ...originalArguments);
       });
     };
