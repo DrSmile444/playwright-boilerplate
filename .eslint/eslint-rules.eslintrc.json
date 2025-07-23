@@ -1,0 +1,10 @@
+{
+  "overrides": [
+    {
+      "files": ["./.eslint/**/*.{js,mjs,cjs,ts,tsx}"],
+      "rules": {
+        "import/no-extraneous-dependencies": "off"
+      }
+    }
+  ]
+}

@@ -9,9 +9,9 @@ export const unicornEslint = {
     unicorn: eslintPluginUnicorn,
   },
   rules: {
-    'unicorn/no-null': 'off',
-    'unicorn/prefer-top-level-await': 'off',
     'unicorn/no-array-for-each': 'off',
+    'unicorn/no-null': 'off',
     'unicorn/prefer-module': 'off',
+    'unicorn/prefer-top-level-await': 'off',
   },
 };

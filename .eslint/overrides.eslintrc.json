@@ -18,12 +18,6 @@
         "@typescript-eslint/no-unsafe-function-type": "off",
         "@typescript-eslint/no-unsafe-return": "off"
       }
-    },
-    {
-      "files": ["src/**/*.{setup,teardown}.{ts,js}"],
-      "rules": {
-        "playwright/expect-expect": "off"
-      }
     }
   ]
 }

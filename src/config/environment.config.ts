@@ -2,7 +2,7 @@ import * as typedDotenv from 'typed-dotenv';
 
 import type { EnvironmentConfig } from '@interfaces/environment.interface';
 
-const { error, env } = typedDotenv.config();
+const { env, error } = typedDotenv.config();
 
 if (error) {
   console.error('Something wrong with env variables');
