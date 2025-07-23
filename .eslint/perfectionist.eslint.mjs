@@ -44,15 +44,7 @@ export default [
         },
       ],
       'perfectionist/sort-modules': 'off',
-      'perfectionist/sort-objects': [
-        'error',
-        sortGroup,
-        {
-          newlinesBetween: 'always',
-          partitionByComment: true,
-          type: 'natural',
-        },
-      ],
+      'perfectionist/sort-objects': 'off',
       'perfectionist/sort-union-types': [
         'error',
         {
