@@ -34,6 +34,7 @@
   "license": "ISC",
   "description": "Modern, scalable TypeScript boilerplate for Node.js projects with strict linting, Prettier formatting, modular structure, and Vitest testing.",
   "dependencies": {
+    "@playwright/test": "^1.57.0",
     "typed-dotenv": "^10.0.2"
   },
   "devDependencies": {
@@ -42,7 +43,6 @@
     "@eslint/compat": "^2.0.0",
     "@eslint/eslintrc": "^3.3.3",
     "@eslint/js": "^9.39.2",
-    "@playwright/test": "^1.57.0",
     "@stylistic/eslint-plugin": "^5.6.1",
     "@types/node": "^22.18.8",
     "@vitest/eslint-plugin": "^1.6.5",

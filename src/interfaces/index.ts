@@ -1,4 +1,5 @@
 export * from './environment.interface';
+
 export * from './playwright-config.interface';
 
 const WrongName = 123;

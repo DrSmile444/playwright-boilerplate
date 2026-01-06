@@ -3,6 +3,7 @@ console.info('video.preload.js loaded');
 
 const displayTypingEffect = (target, text) => {
   const typingEffect = document.createElement('div');
+
   typingEffect.className = 'typing-effect';
   typingEffect.textContent = text;
   target.parentElement.style.position = 'relative';
@@ -17,6 +18,7 @@ const displayTypingEffect = (target, text) => {
 
 const displayClickEffect = (event) => {
   const clickEffect = document.createElement('div');
+
   clickEffect.className = 'click-effect';
   clickEffect.style.left = `${event.clientX - 30}px`; // Center the effect
   clickEffect.style.top = `${event.clientY - 30}px`; // Center the effect
@@ -28,8 +30,9 @@ const displayClickEffect = (event) => {
   });
 };
 
-window.addEventListener('DOMContentLoaded', () => {
+globalThis.addEventListener('DOMContentLoaded', () => {
   const style = document.createElement('style');
+
   style.innerHTML = `
     .playwright-cursor {
       width: 40px;
@@ -98,9 +101,11 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     }
   `;
+
   document.head.append(style);
 
   const cursor = document.createElement('div');
+
   cursor.innerHTML = `
     <?xml version="1.0" encoding="utf-8"?>
     <!-- Generator: Adobe Illustrator 18.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
@@ -113,10 +118,12 @@ window.addEventListener('DOMContentLoaded', () => {
       <polygon points="9.2,7.3 9.2,18.5 12.2,15.6 12.6,15.5 17.4,15.5 "/>
     </svg>
   `;
+
   cursor.className = 'playwright-cursor';
   document.body.append(cursor);
 
   const frameUpdater = document.createElement('div');
+
   frameUpdater.className = 'frame-updater';
   document.body.append(frameUpdater);
 
@@ -137,6 +144,7 @@ window.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('input', (event) => {
     if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
       const typedText = event.target.value;
+
       if (typedText.length > 0) {
         displayTypingEffect(event.target, 'Typing...');
       }

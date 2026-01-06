@@ -1,8 +1,8 @@
 import { defineConfig } from 'eslint/config';
 
 import nodeConfigs from './.eslint/node.eslint.mjs';
-import vitestEslint from './.eslint/vitest.eslint.mjs';
 import { playwrightEslint } from './.eslint/playwright.eslint.mjs';
+import vitestEslint from './.eslint/vitest.eslint.mjs';
 
 export default defineConfig([
   // Apply this config to js and ts files only

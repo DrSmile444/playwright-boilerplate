@@ -14,9 +14,8 @@ export function FieldStep() {
       // 3. Use `stepName` when it's defined or
       // fall back to class name / method name
       const name = `Fill '${this.selector}' with ${JSON.stringify(originalArguments[0])} - ${this.constructor.name}`;
-      return test.step(name, () => {
-        return target.call(this, ...originalArguments);
-      });
+
+      return test.step(name, () => target.call(this, ...originalArguments));
     };
   };
 }
